@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//retorna a palavra a partir do primeiro elemento c que encontrar
+//Retorna a palavra a partir do primeiro elemento c que encontrar
 char *ft_strchr(const char *s, int c)
 {   
     while (*s)

@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//ocupa n bytes com o elemento c a partir do elemento para o qual s está a apontar
+//Ocupa n bytes com o elemento c a partir 
+//do elemento para o qual s está a apontar
 void *ft_memset(void *s, int c, size_t n)
 {
     char	*str;
