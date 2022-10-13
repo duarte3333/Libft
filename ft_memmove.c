@@ -1,6 +1,4 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 //Esta funcao e meia gay
 void *ft_memmove(void *dest, const void *src, size_t n)

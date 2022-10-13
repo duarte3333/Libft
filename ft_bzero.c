@@ -1,22 +1,19 @@
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-//Ocupa n bytes com o elemento c a partir 
-//do elemento para o qual s está a apontar
-void *ft_memset(void *s, int c, size_t n)
+//Ocupa n bytes com NULL a partir do elemento para o qual s está a apontar
+void ft_bzero(void *s, size_t n)
 {
-    char	*str;
+    char    *str;
     int     i;
 
     i = -1;
-	str = (char *)s;
+    str = (char *)s;
     while (n > 0)
     {
-        str[++i] = c;
+        str[++i] = 0;
         n--;
     }
-    return (s);
+    
 }
 
 // int main()
@@ -25,7 +22,7 @@ void *ft_memset(void *s, int c, size_t n)
 //     printf("\nBefore memset(): %s\n", str);
   
 //     // Fill 8 characters starting from str[13] with '.'
-//     ft_memset(str + 13, 0, 8*sizeof(char));
+//     ft_bzero(str + 13, 2*sizeof(char));
   
 //     printf("After memset():  %s", str);
 //     return 0;

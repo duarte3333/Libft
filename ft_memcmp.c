@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 //Ao contrario do strcmp, compara duas strings ate n bytes
 //mas acaba por ser ate serem diferentes

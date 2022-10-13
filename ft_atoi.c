@@ -1,9 +1,8 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 const char *ft_white_spaces(const char *nptr)
 {
-    while (*nptr <= 32)
+    while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
         nptr++;
     return (nptr);
 }
@@ -16,7 +15,6 @@ int ft_atoi(const char *nptr)
     signal = 1;
     nb = 0;
     nptr = ft_white_spaces(nptr);
-    printf("aqui %s\n", nptr);
     if (*nptr == '-')
     {
         signal *= -1;
@@ -34,6 +32,6 @@ int ft_atoi(const char *nptr)
 
 // int main()
 // {
-//     printf("mine: %i\n", ft_atoi("  -321a12"));
-//     printf("their: %i\n", atoi("  -321a12"));
+//     printf("mine: %i\n", ft_atoi("\e475"));
+//     printf("their: %i\n", atoi("\e475"));
 // }

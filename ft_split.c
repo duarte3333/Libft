@@ -1,21 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	in_string(char c, char *charset)
+int	in_string(char c, char charset)
 {
-	int	i;
-
-	i = 0;
-	while (charset[i] != '\0')
-	{
-		if (charset[i] == c)
-			return (0);
-		i++;
-	}
+	if (charset == c)
+		return (0);
 	return (1);
 }
 
-int	ft_strlen_s(char *str, char *charset)
+int	ft_strlen_s(char const *str, char charset)
 {
 	int	i;
 
@@ -25,7 +17,7 @@ int	ft_strlen_s(char *str, char *charset)
 	return (i);
 }
 
-int	count_strings(char *str, char *charset)
+int	count_strings(char const *str, char charset)
 {
 	int	i;
 	int	counter;
@@ -44,7 +36,7 @@ int	count_strings(char *str, char *charset)
 	return (counter);
 }
 
-char	*word_allocate(char *str, char *charset)
+char	*word_allocate(char const *str, char charset)
 {
 	int		len_word;
 	char	*word;
@@ -64,7 +56,11 @@ char	*word_allocate(char *str, char *charset)
 	return (word);
 }
 
-char	**ft_split(char *str, char *charset)
+//Esta funcao recebe uma string e uma string de separadores
+//E vai retornar uma lista de strings em que cada string
+//serao os elementos da string principal ate se encontrar
+//um separador
+char	**ft_split(char const *str, char charset)
 {
 	char	**list_str;
 	int		number_str;

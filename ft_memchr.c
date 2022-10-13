@@ -1,5 +1,4 @@
-#include <string.h>
-#include <stdio.h> 
+#include "libft.h"
 
 //Esta funcao percorre n bytes ate encontrar o elemento c
 //caso encontre, retorna um ponteiro que aponta para

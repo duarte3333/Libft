@@ -1,5 +1,4 @@
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 //Copia n bytes da src para o dest
 void *ft_memcpy(void *dest, const void *src, size_t n)
@@ -19,9 +18,9 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-int main()
-{
-    char oi[10] = "ola";
-    printf("mine %s\n", (char *)ft_memcpy(oi, "banako", 3));
-    printf("their %s\n", (char *)memcpy(oi, "banako", 3));
-}
+// int main()
+// {
+//     char oi[10] = "ola";
+//     printf("mine %s\n", (char *)ft_memcpy(oi, "banako", 3));
+//     printf("their %s\n", (char *)memcpy(oi, "banako", 3));
+// }

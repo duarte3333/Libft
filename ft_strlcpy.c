@@ -1,22 +1,11 @@
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	int	j;
-
-	j = 0;
-	while (str[j] != '\0')
-		j++;
-	return (j);
-}
+#include "libft.h"
 
 //Funciona como strncpy mas garante o terminio da str com \0
 //copia size - 1 elementos e para garantir o \0 no final
 //Versao melhorada do strncpy
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	src_size;
+	size_t	src_size;
 
 	src_size = ft_strlen(src);
 	if (size != 0)

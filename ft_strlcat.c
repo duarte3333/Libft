@@ -1,39 +1,25 @@
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+//Esta funcao vai concatenar duas str, a src ao dest
+//Se o size for 3, dest 5, src 4 ele retorna 4+3=7
+//Se o size for 0, dest 5, src 4 ele retorna 4+0=4
+//Se o size for 7, dest 5, src 4 ele retorna 4+5=9
+//So vai dar cat de (size - dlen - 1) no maximo
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dlen;
-	unsigned int	slen;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (dst[i] && i < size)
 		i++;
-	dlen = i;
-	slen = ft_strlen(src);
-	if (size == 0 || size <= dlen)
+	while (src[j] && (i + j + 1) < size)
 	{
-		return (slen + size);
-	}
-	while (src [j] != '\0' && (j + 1 < (size - dlen)))
-	{
-		dest[j + i] = src [j];
+		dst[i + j] = src[j];
 		j++;
 	}
-	dest[dlen + j] = '\0';
-	return (dlen + slen);
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }

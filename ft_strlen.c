@@ -1,6 +1,6 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
+//Retorna o numero de elementos de uma str sem contar com o NULL
 size_t ft_strlen(const char *str)
 {
     int i;
