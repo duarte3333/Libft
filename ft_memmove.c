@@ -1,6 +1,7 @@
 #include "libft.h"
 
 //Esta funcao e meia gay
+//memcpy com malloc
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
     char    *dest1;

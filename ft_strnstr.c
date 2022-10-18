@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int ft_checknexts(char *big, char *little)
+int ft_checknexts(char *big, char *little, size_t len)
 {
-    while (*little && (*big == *little))
+    while (*little && (*big == *little) && len)
     {
         if (*big == *little)
         {
@@ -12,7 +12,8 @@ int ft_checknexts(char *big, char *little)
             little++;
         }  
         else
-            return (0);    
+            return (0);  
+        len--;  
     }
     if (*little == 0)
         return (1);
@@ -36,7 +37,7 @@ char 	*ft_strnstr (const char *big, const char *little, size_t len)
         {
             //printf("Abig: %c\n", *big);
             //printf("Alittle: %c\n", *little);
-            if ((*big == *little) && ft_checknexts((char *)big, (char *)temp))
+            if ((*big == *little) && ft_checknexts((char *)big, (char *)temp, len))
                 return ((char *)big);
             little++;
         }

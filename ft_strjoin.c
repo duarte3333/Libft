@@ -1,77 +1,40 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_size_concact(char **strs, int size)
+//Esta funcao recebe duas strings e faz a concatenação de ambas
+//ou seja, junta-as
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		size_concat;
-	int		size_str;
-	int		i;
+	char	*concat;
+	char	*temp;
 
-	i = 0;
-	size_concat = 0;
-	while (i < size)
+	size_concat = ft_strlen(s1) + ft_strlen(s2);
+	if (size_concat == 0)
+		return ((char *)malloc(0 * sizeof(char)));
+	concat = (char *)malloc((size_concat + 1) * sizeof(char));
+	concat[size_concat] = 0;
+	temp = concat;
+	while (*s1)
 	{
-		size_str = ft_strlen(strs[i]);
-		size_concat += size_str;
-		i++;
+		*concat = *s1;
+		concat++;
+		s1++;
 	}
-	return (size_concat);
-}
-
-char	*fill_concat(char *concat, int size, char **strs, char *sep)
-{
-	int		i;
-	int		j;
-	int		g;
-	int		size_str;
-	int		index_concat;
-
-	i = -1;
-	index_concat = -1;
-	while ((++i) < size)
+	while (*s2)
 	{
-		size_str = ft_strlen(strs[i]);
-		j = -1;
-		while ((++j) < size_str)
-			concat[++index_concat] = strs[i][j];
-		g = -1;
-		while (sep[++g] != '\0')
-		{
-			if (i == (size - 1))
-				break ;
-			concat[++index_concat] = sep[g];
-		}
+		*concat = *s2;
+		concat++;
+		s2++;
 	}
+	concat = temp;
 	return (concat);
 }
 
-//Esta funcao recebe um lista de strings e junta-as colocando
-//um separador entre cada uma delas, tudo numa unica string
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int		size_concat;
-	char	*concat_final;
-	char	*concat;
 
-	if (size == 0)
-		return ((char *)malloc(0 * sizeof(char)));
-	size_concat = ft_size_concact(strs, size) + (size - 1) * ft_strlen(sep);
-	concat = (char *)malloc((size_concat + 1) * sizeof(char));
-	concat[size_concat] = 0;
-	concat_final = fill_concat(concat, size, strs, sep);
-	return (concat_final);
-}
-
+// int main()
+// {
+// 	printf("%s", ft_strjoin("ola","banana"));
+// }
 // int	main(void)
 // {
 // 	char	**strs;
