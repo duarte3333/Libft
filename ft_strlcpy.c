@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 21:39:15 by dsa-mora          #+#    #+#             */
+/*   Updated: 2022/10/22 21:39:15 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 //Funciona como strncpy mas garante o terminio da str com \0
@@ -14,8 +26,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		{
 			*dest = *src;
 			dest++;
-            src++;
-            size--;
+			src++;
+			size--;
 		}
 		*dest = '\0';
 	}

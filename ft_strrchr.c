@@ -1,29 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 21:47:07 by dsa-mora          #+#    #+#             */
+/*   Updated: 2022/10/22 21:47:07 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_checkfront(const char *s, int c)
+int	ft_checkfront(const char *s, int c)
 {
-    s++;
-    while (*s)
-    {
-        if (*s == c)
-            return (0);
-        s++;
-    }
-    return (1);
+	s++;
+	while (*s)
+	{
+		if (*s == c)
+			return (0);
+		s++;
+	}
+	return (1);
 }
 
 //Retorna a palavra a partir do ultimo elemento c que encontrar
-char *ft_strrchr(const char *s, int c)
-{   
-    while (*s)
-    {
-        if(*s == c && ft_checkfront(s, c))
-            return ((char *)s);
-        s++;
-    }
-    if (c == '\0')
+char	*ft_strrchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == c && ft_checkfront(s, c))
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
 		return ((char *)s);
-    return (0);
+	return (0);
 }
 
 // int main()

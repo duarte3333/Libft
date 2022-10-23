@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 21:37:54 by dsa-mora          #+#    #+#             */
+/*   Updated: 2022/10/22 21:37:54 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 //Esta funcao recebe duas strings e faz a concatenação de ambas
@@ -29,8 +40,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	concat = temp;
 	return (concat);
 }
-
-
 // int main()
 // {
 // 	printf("%s", ft_strjoin("ola","banana"));

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 14:31:39 by dsa-mora          #+#    #+#             */
+/*   Updated: 2022/10/22 14:31:39 by dsa-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 //Esta funcao percorre n bytes ate encontrar o elemento c
@@ -5,19 +17,19 @@
 //esse elemento
 //Ele faz o cast automaticamente de void
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    char *str;
+	char	*str;
 
-    str = (char *)s;
-    while (n)
-    {
-        if ((unsigned char)*str == (unsigned char)c)
-            return (str);
-        str++;
-        n--;
-    }
-    return (0);
+	str = (char *)s;
+	while (n)
+	{
+		if ((unsigned char)*str == (unsigned char)c)
+			return (str);
+		str++;
+		n--;
+	}
+	return (0);
 }
 
 // int main()

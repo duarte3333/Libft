@@ -1,3 +1,4 @@
+
 #include "libft.h"
 //Se fd for 0 -> standard input
 //Se fd for 1 -> standard output
