@@ -6,17 +6,13 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:51:19 by dsa-mora          #+#    #+#             */
-/*   Updated: 2022/10/23 15:35:21 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:34:56 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-typedef struct s_list{
-	void			*data;
-	struct s_list	*next;
-}	t_list;
-
+//Esta funcao calcula o tamanho de uma linked list
 int	ft_lstsize(t_list *lst)
 {
 	size_t	i;

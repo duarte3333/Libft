@@ -23,6 +23,8 @@ int	ft_in_set(char c, char const *set)
 	return (0);
 }
 
+//Esta funcao recebe " duarte sa  " e retorna "duarte sa"
+//ou seja, elimina a str set no inicio e no final da str s1
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;

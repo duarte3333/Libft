@@ -6,35 +6,14 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:30:06 by dsa-mora          #+#    #+#             */
-/*   Updated: 2022/10/23 16:41:16 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:36:25 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-typedef struct s_list{
-	int				data;
-	struct s_list	*next;
-}	t_list;
-
-// void	ft_lstadd_front(t_list **lst, t_list *new)
-// {
-// 	t_list	*temp;
-// 	t_list	*current;
-
-// 	temp = *lst;
-// 	current = *lst;
-// 	while (current)
-// 	{
-// 		current->data = current->next->data;
-// 		current->next = current->next->next;
-// 		current = current->next;
-// 	}
-// 	current = temp;
-// 	current->data = new->data;
-// 	current->next = new->next;
-// }
-
+//Esta funcao adiciona um elemento ao inicio
+//da linked list
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)

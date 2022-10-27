@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//Verifica se temos um white space ou nao
 const char	*ft_white_spaces(const char *nptr)
 {
 	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
@@ -19,6 +20,8 @@ const char	*ft_white_spaces(const char *nptr)
 	return (nptr);
 }
 
+//Esta funcao transforma um inteiro de base 10
+//numa string com os algarismos do inteiro de base 10
 int	ft_atoi(const char *nptr)
 {
 	int	signal;

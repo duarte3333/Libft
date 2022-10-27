@@ -6,16 +6,11 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:22:47 by dsa-mora          #+#    #+#             */
-/*   Updated: 2022/10/23 16:42:20 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:45:23 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-typedef struct s_list{
-	int				data;
-	struct s_list	*next;
-}	t_list;
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
