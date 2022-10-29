@@ -11,39 +11,34 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-//Esta funcao e meia gay
-//memcpy com malloc
+//Se src < dest(caso overlapping) entao a src 
+//comeca do final da src(do n basicamente) 
+//Se src > dest entao a src comeca do inicio da src(do n basicamente)
+//Esta funcao faz o mesmo do memcpy mas faz melhor porque protege de overlaping
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*dest1;
-	char	*src1;
-	char	*tmp;
-	int		tmp_n;
-	int		i;
+	size_t	len;
 
-	tmp = (char *)malloc(sizeof(char) * n);
-	dest1 = (char *)dest;
-	src1 = (char *)src;
-	tmp_n = n;
-	i = 0;
-	if (tmp == NULL)
-		return (NULL);
-	else
+	len = 0;
+	if (src < dest)
 	{
-		while (tmp_n--)
+		len = n;
+		while (len > 0)
 		{
-			tmp[i] = src1[i];
-			i++;
-		}
-		i = 0;
-		while (n--)
-		{
-			dest1[i] = tmp[i];
-			i++;
+			len--;
+			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
 		}
 	}
-	free(tmp);
-	return (dest1);
+	else
+	{
+		len = 0;
+		while (len < n)
+		{
+			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+			len++;
+		}
+	}
+	return (dest);
 }
 
 // int main()

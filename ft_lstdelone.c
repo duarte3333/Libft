@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 20:55:51 by dsa-mora          #+#    #+#             */
-/*   Updated: 2022/10/27 21:02:30 by dsa-mora         ###   ########.fr       */
+/*   Created: 2022/10/27 21:03:59 by dsa-mora          #+#    #+#             */
+/*   Updated: 2022/10/27 21:04:17 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	t_list new_list;
-	while(lst)
+	if (!del)
+		return ;
+	if (lst)
 	{
-		new_list = *(*f)(lst->content);
-		lst = lst->next;
+		(*del)(lst->content);
+		free(lst);
 	}
-	return (new_list);
 }
