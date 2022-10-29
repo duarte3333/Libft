@@ -6,16 +6,16 @@
 /*   By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:30:06 by dsa-mora          #+#    #+#             */
-/*   Updated: 2022/10/27 20:59:22 by dsa-mora         ###   ########.fr       */
+/*   Updated: 2022/10/29 13:08:47 by dsa-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //t_list **lst equivale a uma list de linked lists
-//com apenas uma linked list
 //Esta funcao adiciona um elemento ao inicio
-//da linked list
+//da linked list, colocando o new->next a apontar
+//para o primeiro elemento da linked list recebida
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)
