@@ -44,9 +44,9 @@ char	*ft_itoa(int nbr)
 	nb = (long)nbr;
 	size_str = ft_size(nb);
 	str_nbr = (char *)malloc((size_str + 1) * sizeof(char));
-	str_nbr[size_str] = 0;
 	if (!str_nbr)
 		return (NULL);
+	str_nbr[size_str] = 0;
 	if (nb == 0)
 		*str_nbr = '0';
 	if (nb < 0)

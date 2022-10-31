@@ -17,7 +17,7 @@ int	ft_checkfront(const char *s, int c)
 	s++;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return (0);
 		s++;
 	}

@@ -55,7 +55,7 @@ char	*word_allocate(char const *str, char charset)
 
 	i = 0;
 	len_word = ft_strlen_s(str, charset);
-	word = (char *)malloc((len_word + 1) * sizeof(char *));
+	word = (char *)malloc((len_word + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	word[len_word] = 0;

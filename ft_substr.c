@@ -20,21 +20,19 @@
 //Caso o indice len exceda o tamanho da str s ele acaba a substring
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	char	*temp;
-	size_t	size_s;
+	char			*substr;
+	char			*temp;
 
-	if (!s)
-		return (NULL);
-	size_s = ft_strlen(s);
-	if (size_s  < len)
-		substr = (char *)malloc((size_s + 1) * sizeof(char));
+	if (start >= ft_strlen(s))
+		substr = malloc(1);
+	else if (ft_strlen(s) <= len)
+		substr = (char *)malloc((ft_strlen(s) - start + 1) * sizeof(char));
 	else
 		substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
 	temp = substr;
-	while (len && (s[start] != 0) && (start <= size_s))
+	while (len && (start <= ft_strlen(s)))
 	{
 		*substr = s[start];
 		substr++;

@@ -20,9 +20,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*temp;
 
 	size_concat = ft_strlen(s1) + ft_strlen(s2);
-	if (size_concat == 0)
-		return ((char *)malloc(0 * sizeof(char)));
 	concat = (char *)malloc((size_concat + 1) * sizeof(char));
+	if (!concat)
+		return (NULL);
 	concat[size_concat] = 0;
 	temp = concat;
 	while (*s1)

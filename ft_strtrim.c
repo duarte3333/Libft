@@ -35,9 +35,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_in_set(s1[i], set))
 		i++;
 	j = ft_strlen(s1) - 1;
-	while (s1[j] && ft_in_set(s1[j], set))
+	while (j && ft_in_set(s1[j], set))
 		j--;
-	trim = malloc(sizeof(char) * (j - i + 2));
+	if (j < i)
+	{
+		trim = ft_calloc(1, 1);
+		return (trim);
+	}
+	else
+		trim = malloc(sizeof(char) * (j - i + 2));
+	if (!trim)
+		return (NULL);
 	ft_strlcpy(trim, &s1[i], j - i + 2);
 	return (trim);
 }
