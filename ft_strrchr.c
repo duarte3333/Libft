@@ -29,11 +29,11 @@ char	*ft_strrchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c && ft_checkfront(s, c))
+		if (*s == (char)c && ft_checkfront(s, c))
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (*s == (char)c)
 		return ((char *)s);
 	return (0);
 }

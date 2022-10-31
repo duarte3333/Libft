@@ -30,7 +30,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	p = malloc(final_size);
 	if (!p)
 		return (NULL);
-	else
-		ft_bzero(p, final_size);
+	ft_bzero(p, final_size);
 	return (p);
 }
