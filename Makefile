@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: dsa-mora <dsa-mora@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/31 19:37:59 by dsa-mora          #+#    #+#              #
-#    Updated: 2022/10/31 19:37:59 by dsa-mora         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS	=  ft_atoi.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -61,19 +49,17 @@ OBNS	= ${BNS:.c=.o}
 INCS	= libft.h
 NAME	= libft.a
 LIBC	= ar rcs
-CC		= gcc
+CC		= clang
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} -c ${SRCS} ${INCS}
 	${LIBC} ${NAME} ${OBJS}
 
 all: ${NAME}
 
-bonus: ${NAME}
-	${CC} ${CFLAGS} -c ${BNS}
+bonus: ${NAME} ${OBNS}
 	${LIBC} ${NAME} ${OBNS}
 
 clean:
@@ -84,4 +70,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re, bonus
+.PHONY: all, clean, fclean, re
