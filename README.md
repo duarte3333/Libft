@@ -146,8 +146,8 @@ Using a phony target in a Makefile can have several benefits:
         <td><b>daily.dev</b></td>
      </tr> -->
      <tr>
-       <td><img src="https://user-images.githubusercontent.com/76222459/230504054-7853a892-6abd-4981-a1a3-a4f3f7383f8b.jpg" width="400" alt="sunil sapkota twitter" > </img></td>
-        <td><img src="https://user-images.githubusercontent.com/76222459/230504056-31bca226-5e6e-4ad6-91dd-6e6f953a9f19.jpg" width="400" alt="sunil sapkota's Dev Card"/></td>
+       <td><img src="https://user-images.githubusercontent.com/76222459/230504056-31bca226-5e6e-4ad6-91dd-6e6f953a9f19.jpg" width="400" alt="sunil sapkota twitter" > </img></td>
+        <td><img src="https://user-images.githubusercontent.com/76222459/230504054-7853a892-6abd-4981-a1a3-a4f3f7383f8b.jpg" width="400" alt="sunil sapkota's Dev Card"/></td>
      </tr>
     </table>
     </div>
